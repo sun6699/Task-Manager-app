@@ -6,7 +6,7 @@ require("dotenv").config();
 const app = express();
 app.use(cors());
 app.use(express.json());
-
+const API = "https://task-manager-app-zk2p.onrender.com";
 const PORT = process.env.PORT || 3000;
 
 // Database setup
