@@ -30,3 +30,7 @@ app.delete("/tasks/:id", (req, res) => {
 });
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
+app.get("/tasks", (req, res) => { ... });
+app.post("/tasks", (req, res) => { ... });
+app.delete("/tasks/:id", (req, res) => { ... });
