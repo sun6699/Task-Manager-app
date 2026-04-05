@@ -14,6 +14,9 @@ const db = new sqlite3.Database("./tasks.db");
 db.run("CREATE TABLE IF NOT EXISTS tasks(id INTEGER PRIMARY KEY AUTOINCREMENT, title TEXT)");
 
 // Routes
+app.get("/", (req, res) => {
+  res.send("Task Manager API is running");
+});
 app.get("/tasks", (req, res) => {
   db.all("SELECT * FROM tasks", (err, rows) => res.json(rows));
 });
